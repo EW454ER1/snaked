@@ -1,0 +1,217 @@
+
+{
+    "appName": "Serpens Fortuna",
+    "common": {
+        "cancel": "Cancel",
+        "confirm": "Confirm"
+    },
+    "nav": {
+        "lobby": "Lobby",
+        "store": "Store",
+        "wallet": "Wallet",
+        "referrals": "Referrals"
+    },
+    "userMenu": {
+        "gameStats": "Game Stats",
+        "rounds": "Rounds",
+        "winRate": "Win Rate",
+        "logout": "Logout"
+    },
+    "lobby": {
+        "title": "Game Lobby",
+        "description": "Choose your table and may fortune favor you. Your balance:",
+        "foodValue": "Food value",
+        "insufficientFunds": "Insufficient Funds",
+        "enterTable": "Enter Table",
+        "referral": {
+            "title": "Boost Your Wallet!",
+            "description": "Invite friends with your referral code to earn 1% on their deposits, and they'll get a $10 bonus just for signing up!",
+            "button": "Go to Referrals"
+        },
+        "dialog": {
+            "title": "Entering {{tableName}}",
+            "betDescription": "A bet of ${{betAmount}} will be reserved from your wallet. Are you sure you want to proceed?",
+            "freeDescription": "You are entering a free table. Good luck!"
+        }
+    },
+    "gameTables": {
+        "1": { "name": "Training Ground", "required": "Free (1/day)" },
+        "2": { "name": "Bronze League", "required": "$10 Bet" },
+        "3": { "name": "Silver League", "required": "$50 Bet" },
+        "4": { "name": "Gold League", "required": "$100 Bet" },
+        "5": { "name": "Platinum Arena", "required": "$250 Bet" },
+        "6": { "name": "Diamond Arena", "required": "$500 Bet" },
+        "7": { "name": "Master's Challenge", "required": "$1000 Bet" }
+    },
+    "store": {
+        "title": "Item Store",
+        "description": "Purchase special buffs to gain an edge. Your Balance:",
+        "insufficientFunds": "Insufficient Funds",
+        "buyNow": "Buy Now",
+        "items": {
+            "1": { "name": "Single Revive", "description": "Gives you a second chance! Automatically revives your snake once upon death." },
+            "2": { "name": "Double Revive", "description": "The ultimate comeback! Revives your snake twice in a single game." },
+            "3": { "name": "Triple Revive", "description": "Become nearly invincible. Three revives to secure your victory." },
+            "4": { "name": "Obstacle Shield", "description": "Play one game without any obstacles appearing. Guarantees a clear field." }
+        },
+        "dialog": {
+            "title": "Confirm Purchase",
+            "description": "This will deduct ${{price}} from your wallet to buy {{itemName}}. Are you sure?"
+        }
+    },
+    "wallet": {
+        "title": "My Wallet",
+        "description": "Manage your funds, deposits, and withdrawals.",
+        "balance": {
+            "title": "Current Balance",
+            "bonusInfo": "Includes non-withdrawable bonus."
+        },
+        "tabs": {
+            "deposit": "Deposit",
+            "withdraw": "Withdraw"
+        },
+        "deposit": {
+            "title": "Deposit USDT",
+            "description": "Send USDT (TRC20) to the address below, then submit your deposit amount for admin approval.",
+            "walletAddressLabel": "TRC20 Wallet Address",
+            "amountLabel": "Amount Deposited",
+            "amountPlaceholder": "Enter amount",
+            "proofLabel": "Proof of Transfer",
+            "submitButton": "Submit Deposit for Approval",
+            "fee": {
+                "title": "Fee Calculation",
+                "description": "A 2% fee of ${{fee}} will be deducted. You will receive ${{received}}."
+            }
+        },
+        "withdraw": {
+            "title": "Withdraw USDT",
+            "description": "Withdraw funds to your TRC20 wallet.",
+            "conditions": {
+                "title": "Withdrawal Conditions",
+                "description": "You must have at least 5 active referrals (Current: {{referralsCount}}) and a minimum total deposit of $100 (Current: ${{totalDeposits}}) to be eligible.",
+                "unlockTimer": "Withdrawal unlocked in: {{timeLeft}}"
+            },
+            "limit": {
+                "title": "Withdrawal Limit",
+                "description": "You can only withdraw up to 2% of your total balance every 48 hours."
+            },
+            "addressLabel": "Your TRC20 Wallet Address",
+            "addressPlaceholder": "Enter your wallet address",
+            "amountLabel": "Amount",
+            "amountPlaceholder": "Max ${{limit}} (2%)",
+            "submitButton": "Request Withdrawal"
+        },
+        "history": {
+            "title": "Transaction History",
+            "description": "A record of your recent deposits and withdrawals.",
+            "noTransactions": "You have no transactions yet.",
+            "table": {
+                "date": "Date",
+                "type": "Type",
+                "amount": "Amount",
+                "status": "Status"
+            },
+            "types": {
+                "deposit": "Deposit",
+                "withdrawal": "Withdrawal"
+            },
+            "statuses": {
+                "Pending": "Pending",
+                "Approved": "Approved",
+                "Rejected": "Rejected"
+            }
+        }
+    },
+    "referrals": {
+        "title": "Referral Program",
+        "description": "Invite friends and earn a 1% commission on their deposits. Your friend receives a $10 bonus for signing up!",
+        "stats": {
+            "total": "Total Referrals",
+            "active": "Active Referrals",
+            "earnings": "Total Earnings"
+        },
+        "yourInfo": {
+            "title": "Your Referral Info",
+            "description": "Share your code or link. Your friend gets a $10 bonus for signing up, and you'll earn a 1% commission on every deposit they make.",
+            "codeLabel": "Your Code",
+            "linkLabel": "Your Link",
+            "linkPlaceholder": "Generating link..."
+        },
+        "growth": {
+            "title": "Referral Growth",
+            "description": "Your monthly referral growth."
+        },
+        "list": {
+            "title": "Your Referrals",
+            "description": "A detailed list of users you've referred.",
+            "noReferrals": "You haven't referred anyone yet. Share your code to get started!",
+            "table": {
+                "username": "Username",
+                "dateJoined": "Date Joined",
+                "status": "Status",
+                "earnings": "Earnings From User"
+            },
+            "statuses": {
+                "active": "Active",
+                "inactive": "Inactive"
+            }
+        }
+    },
+    "toast": {
+        "insufficientFunds": {
+            "title": "Insufficient Funds",
+            "description": "Please deposit to play at this table."
+        },
+        "purchaseSuccess": {
+            "title": "Purchase Successful!",
+            "description": "You bought {{itemName}} for ${{price}}. It will be available for your next game."
+        },
+        "purchaseInsufficientFunds": {
+            "title": "Insufficient Funds",
+            "description": "You need ${{price}} but only have ${{balance}}."
+        },
+        "copied": {
+            "title": "Copied!",
+            "descriptionWallet": "Wallet address copied to clipboard.",
+            "descriptionReferral": "Referral info copied to clipboard."
+        },
+        "invalidAmount": {
+            "title": "Invalid Amount",
+            "description": "Please enter a valid deposit amount."
+        },
+        "proofRequired": {
+            "title": "Proof Required",
+            "description": "Please upload an image as proof of transfer."
+        },
+        "depositSubmitted": {
+            "title": "Deposit Submitted",
+            "description": "Your deposit of ${{amount}} is being processed and will be reviewed by an admin."
+        },
+        "invalidInput": {
+            "title": "Invalid Input",
+            "description": "Please enter a valid withdrawal amount and address."
+        },
+        "withdrawalSubmitted": {
+            "title": "Withdrawal Submitted",
+            "description": "Your withdrawal request has been sent for approval."
+        },
+        "withdrawalFailed": {
+            "title": "Withdrawal Failed",
+            "description": "You do not meet the conditions for withdrawal or the amount is invalid."
+        }
+    },
+    "months": {
+        "january": "Jan",
+        "february": "Feb",
+        "march": "Mar",
+        "april": "Apr",
+        "may": "May",
+        "june": "Jun",
+        "july": "Jul",
+        "august": "Aug",
+        "september": "Sep",
+        "october": "Oct",
+        "november": "Nov",
+        "december": "Dec"
+    }
+}

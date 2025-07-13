@@ -1,0 +1,250 @@
+
+{
+  "appName": "سيربنس فورتونا",
+  "nav": {
+    "lobby": "الردهة",
+    "store": "المتجر",
+    "wallet": "المحفظة",
+    "referrals": "الإحالات"
+  },
+  "userMenu": {
+    "gameStats": "إحصائيات اللعبة",
+    "rounds": "جولات",
+    "winRate": "نسبة الفوز",
+    "logout": "تسجيل الخروج"
+  },
+  "lobby": {
+    "title": "اختر طاولتك",
+    "description": "رصيدك الحالي:",
+    "referral": {
+      "title": "عزز محفظتك!",
+      "description": "ادعُ الأصدقاء باستخدام رمز الإحالة الخاص بك واكسب 1٪ على إيداعاتهم. يحصلون هم على 5 دولارات لمجرد التسجيل!",
+      "button": "اذهب إلى الإحالات"
+    },
+    "foodValue": "قيمة الطعام",
+    "insufficientFunds": "رصيد غير كاف",
+    "enterTable": "ادخل الطاولة",
+    "dialog": {
+      "title": "هل أنت متأكد من دخول {{tableName}}؟",
+      "betDescription": "سيتم خصم رهان بقيمة ${{betAmount}} من رصيدك. العد التنازلي لمدة 50 ثانية سيبدأ فورًا.",
+      "freeDescription": "هذه طاولة لعب مجانية. العد التنازلي لمدة 50 ثانية سيبدأ فورًا."
+    }
+  },
+  "store": {
+    "title": "متجر التعزيزات",
+    "description": "عزز طريقة لعبك. رصيدك الحالي:",
+    "buyNow": "شراء الآن",
+    "insufficientFunds": "رصيد غير كاف",
+    "dialog": {
+      "title": "تأكيد الشراء",
+      "description": "هل تريد شراء {{itemName}} مقابل ${{price}}؟"
+    },
+    "items": {
+      "1": {
+        "name": "إحياء فردي",
+        "description": "يمنحك فرصة ثانية! يحيي ثعبانك تلقائيًا مرة واحدة عند الموت."
+      },
+      "2": {
+        "name": "إحياء مزدوج",
+        "description": "العودة المطلقة! يحيي ثعبانك مرتين في لعبة واحدة."
+      },
+      "3": {
+        "name": "إحياء ثلاثي",
+        "description": "كن شبه منيع. ثلاث عمليات إحياء لتأمين فوزك."
+      },
+      "4": {
+        "name": "درع العقبات",
+        "description": "العب لعبة واحدة دون ظهور أي عقبات. يضمن ميدانًا واضحًا."
+      }
+    }
+  },
+  "wallet": {
+    "title": "المحفظة الرقمية",
+    "description": "قم بإدارة أموالك بسهولة وأمان.",
+    "balance": {
+      "title": "الرصيد المتاح",
+      "bonusInfo": "الرصيد يشمل أي مكافآت تم ربحها."
+    },
+    "tabs": {
+      "deposit": "إيداع",
+      "withdraw": "سحب"
+    },
+    "deposit": {
+      "title": "إيداع USDT TRC20",
+      "description": "أرسل USDT إلى العنوان أدناه. ستتم إضافة الأموال بعد الموافقة.",
+      "walletAddressLabel": "عنوان محفظة الإيداع",
+      "amountLabel": "المبلغ (USDT)",
+      "amountPlaceholder": "أدخل مبلغ الإيداع",
+      "fee": {
+        "title": "رسوم الإيداع",
+        "description": "سيتم تطبيق رسوم بنسبة 2%. ستتلقى ${{received}} بعد خصم رسوم ${{fee}}."
+      },
+      "proofLabel": "إثبات التحويل (لقطة شاشة)",
+      "submitButton": "إرسال الإيداع"
+    },
+    "withdraw": {
+      "title": "سحب USDT TRC20",
+      "description": "اسحب أرباحك إلى محفظتك.",
+      "conditions": {
+        "title": "شروط السحب",
+        "description": "يجب أن يكون لديك 5 إحالات نشطة على الأقل (الحالي: {{referralsCount}}) وإجمالي إيداع لا يقل عن 100 دولار (الحالي: ${{totalDeposits}}) لتكون مؤهلاً.",
+        "unlockTimer": "فتح السحب خلال: {{timeLeft}}"
+      },
+      "limit": {
+        "title": "حد السحب",
+        "description": "يمكنك سحب ما يصل إلى 2% من إجمالي رصيدك كل 48 ساعة."
+      },
+      "addressLabel": "عنوان محفظة TRC20 الخاصة بك",
+      "addressPlaceholder": "أدخل عنوان محفظة السحب",
+      "amountLabel": "المبلغ",
+      "amountPlaceholder": "الحد الأقصى للسحب: ${{limit}}",
+      "submitButton": "طلب سحب"
+    },
+    "history": {
+      "title": "سجل المعاملات",
+      "description": "عرض تاريخ الإيداعات والسحوبات الخاصة بك.",
+      "table": {
+        "date": "التاريخ",
+        "type": "النوع",
+        "amount": "المبلغ",
+        "status": "الحالة"
+      },
+      "types": {
+        "deposit": "إيداع",
+        "withdrawal": "سحب"
+      },
+      "statuses": {
+        "Pending": "قيد الانتظار",
+        "Approved": "موافق عليه",
+        "Rejected": "مرفوض"
+      },
+      "noTransactions": "لا توجد معاملات لعرضها."
+    }
+  },
+  "referrals": {
+    "title": "الإحالات",
+    "description": "ادعُ الأصدقاء واكسب مكافآت!",
+    "stats": {
+      "total": "إجمالي الإحالات",
+      "active": "الإحالات النشطة",
+      "earnings": "إجمالي الأرباح"
+    },
+    "yourInfo": {
+      "title": "معلومات الإحالة الخاصة بك",
+      "description": "شارك رمزك أو رابطك لبدء الكسب.",
+      "codeLabel": "رمز الإحالة الخاص بك",
+      "linkLabel": "رابط الإحالة الخاص بك",
+      "linkPlaceholder": "جاري إنشاء الرابط..."
+    },
+    "growth": {
+      "title": "نمو الإحالات",
+      "description": "تتبع إحالاتك الجديدة شهريًا."
+    },
+    "list": {
+      "title": "قائمة الإحالات الخاصة بك",
+      "description": "عرض تفاصيل المستخدمين الذين قمت بإحالتهم.",
+      "table": {
+        "username": "اسم المستخدم",
+        "dateJoined": "تاريخ الانضمام",
+        "status": "الحالة",
+        "earnings": "الأرباح"
+      },
+      "statuses": {
+        "active": "نشط",
+        "inactive": "غير نشط"
+      },
+      "noReferrals": "لم تقم بإحالة أي مستخدمين بعد."
+    }
+  },
+  "gameTables": {
+    "1": {
+      "name": "ساحة التدريب",
+      "required": "لعب مجاني (1/يوم)"
+    },
+    "2": {
+      "name": "الدوري البرونزي",
+      "required": "العب 10$"
+    },
+    "3": {
+      "name": "الدوري الفضي",
+      "required": "العب 50$"
+    },
+    "4": {
+      "name": "الدوري الذهبي",
+      "required": "العب 100$"
+    },
+    "5": {
+      "name": "الساحة البلاتينية",
+      "required": "العب 250$"
+    },
+    "6": {
+      "name": "الساحة الماسية",
+      "required": "العب 500$"
+    },
+    "7": {
+      "name": "تحدي الأبطال",
+      "required": "العب 1000$"
+    }
+  },
+  "months": {
+    "january": "يناير",
+    "february": "فبراير",
+    "march": "مارس",
+    "april": "أبريل",
+    "may": "مايو",
+    "june": "يونيو",
+    "july": "يوليو",
+    "august": "أغسطس",
+    "september": "سبتمبر",
+    "october": "أكتوبر",
+    "november": "نوفمبر",
+    "december": "ديسمبر"
+  },
+  "toast": {
+    "insufficientFunds": {
+      "title": "رصيد غير كاف!",
+      "description": "ليس لديك ما يكفي من المال لدخول هذه الطاولة."
+    },
+    "purchaseInsufficientFunds": {
+        "title": "رصيد غير كاف!",
+        "description": "تحتاج إلى ${{price}} ولكن رصيدك هو ${{balance}}."
+    },
+    "purchaseSuccess": {
+        "title": "اكتمل الشراء!",
+        "description": "لقد اشتريت {{itemName}} مقابل ${{price}}."
+    },
+    "copied": {
+        "title": "تم النسخ!",
+        "descriptionReferral": "تم نسخ رابط الإحالة إلى الحافظة.",
+        "descriptionWallet": "تم نسخ عنوان المحفظة إلى الحافظة."
+    },
+    "invalidAmount": {
+        "title": "مبلغ غير صالح",
+        "description": "الرجاء إدخال مبلغ صالح أكبر من الصفر."
+    },
+    "proofRequired": {
+        "title": "مطلوب إثبات",
+        "description": "يرجى تحميل لقطة شاشة كدليل على التحويل."
+    },
+    "depositSubmitted": {
+        "title": "تم إرسال الإيداع",
+        "description": "تم إرسال طلب الإيداع الخاص بك بمبلغ ${{amount}} للمراجعة."
+    },
+    "invalidInput": {
+        "title": "مدخلات غير صالحة",
+        "description": "يرجى ملء جميع الحقول المطلوبة بمبلغ صالح."
+    },
+    "withdrawalSubmitted": {
+        "title": "تم إرسال السحب",
+        "description": "تم إرسال طلب السحب الخاص بك للمراجعة."
+    },
+    "withdrawalFailed": {
+        "title": "فشل السحب",
+        "description": "إما أنك لا تفي بالمتطلبات أو أن المبلغ يتجاوز الحد المسموح به."
+    }
+  },
+  "common": {
+    "cancel": "إلغاء",
+    "confirm": "تأكيد"
+  }
+}
