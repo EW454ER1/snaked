@@ -1,5 +1,6 @@
-"use client"
+'use client';
 
+import React from "react"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 import { useForm } from "react-hook-form"
@@ -46,12 +47,21 @@ const formSchema = z.object({
   referralCode: z.string().optional(),
 })
 
-export default function SignUpPage() {
-  const router = useRouter()
-  const searchParams = useSearchParams()
-  const { toast } = useToast()
-  const { signUp } = useUser()
-  const [isClient, setIsClient] = useState(false)
+import { Suspense } from "react"
+
+function SignUpPageInner() {
+  const router = useRouter();
+  // Wrap useSearchParams in a Suspense boundary using a custom hook
+  let searchParams: ReturnType<typeof useSearchParams> | null = null;
+  try {
+    searchParams = useSearchParams();
+  } catch (e) {
+    // fallback for server-side rendering
+    searchParams = null;
+  }
+  const { toast } = useToast();
+  const { signUp } = useUser();
+  const [isClient, setIsClient] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -61,15 +71,17 @@ export default function SignUpPage() {
       password: "",
       referralCode: "",
     },
-  })
+  });
 
   useEffect(() => {
-    setIsClient(true)
-    const refCode = searchParams.get('ref')
-    if (refCode) {
-      form.setValue('referralCode', refCode)
+    setIsClient(true);
+    if (searchParams) {
+      const refCode = searchParams.get('ref');
+      if (refCode) {
+        form.setValue('referralCode', refCode);
+      }
     }
-  }, [searchParams, form])
+  }, [searchParams, form]);
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     const result = signUp(values);
@@ -78,24 +90,24 @@ export default function SignUpPage() {
       toast({
         title: "Account Created!",
         description: "Welcome to Serpens Fortuna. You can now sign in.",
-      })
-      
+      });
+
       if (result.bonus) {
-          setTimeout(() => {
-              toast({
-                  title: "Welcome Gift!",
-                  description: `You've received a $${result.bonus.toFixed(2)} bonus to start playing!`,
-              });
-          }, 1000);
+        setTimeout(() => {
+          toast({
+            title: "Welcome Gift!",
+            description: `You've received a $${result.bonus!.toFixed(2)} bonus to start playing!`,
+          });
+        }, 1000);
       }
 
-      router.push("/")
+      router.push("/");
     } else {
       toast({
         variant: "destructive",
         title: "Sign-up Failed",
         description: result.message,
-      })
+      });
     }
   }
 
@@ -120,7 +132,7 @@ export default function SignUpPage() {
                 <FormField
                   control={form.control}
                   name="username"
-                  render={({ field }) => (
+                  render={({ field }: { field: any }) => (
                     <FormItem>
                       <FormLabel>Username</FormLabel>
                       <FormControl>
@@ -133,7 +145,7 @@ export default function SignUpPage() {
                 <FormField
                   control={form.control}
                   name="email"
-                  render={({ field }) => (
+                  render={({ field }: { field: any }) => (
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
@@ -146,7 +158,7 @@ export default function SignUpPage() {
                 <FormField
                   control={form.control}
                   name="password"
-                  render={({ field }) => (
+                  render={({ field }: { field: any }) => (
                     <FormItem>
                       <FormLabel>Password</FormLabel>
                       <FormControl>
@@ -159,7 +171,7 @@ export default function SignUpPage() {
                 <FormField
                   control={form.control}
                   name="referralCode"
-                  render={({ field }) => (
+                  render={({ field }: { field: any }) => (
                     <FormItem>
                       <FormLabel>Referral Code (Optional)</FormLabel>
                       <FormControl>
@@ -189,5 +201,13 @@ export default function SignUpPage() {
         </Card>
       </div>
     </div>
+  );
+}
+
+export default function SignUpPage() {
+  return (
+    <Suspense>
+      <SignUpPageInner />
+    </Suspense>
   )
 }
